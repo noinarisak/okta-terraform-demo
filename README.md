@@ -5,7 +5,7 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 ## ToC
 * [Pre-Req](#pre-req)
 * [Quick Start](#quick-start)
-* [More Informaion](#more-information
+* [More Informaion](#more-information)
 
 ## Pre Req
 
