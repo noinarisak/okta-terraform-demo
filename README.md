@@ -45,7 +45,12 @@ api_token = "xxxx"
 ```
 mv backend.config.sample backend.config
 ```
+
+Let's do it!
+
 ### Old School (aka. Manually)
+
+
 
 ### Lazy Way
 Help
