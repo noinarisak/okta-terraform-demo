@@ -18,12 +18,11 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 
 Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since Okta Provider is still *Community* stage the binary will NOT automatically be pulled in by `terraform` cli like aws, gcp, etc. 
 
-Okta Provider instructions: 
+Okta Provider instructions:
 
-* WARNING: `terraform` cli  must be installed.
+* WARNING: `terraform` cli  must be installed
 * Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting zip file associated with OS and unzip. (ie. `erraform-provider-okta-darwin-amd64.zip` for MacOS)
 * Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows.
-* [Deeper details](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
 
 ### Setup Steps for Demo
 Setup developer Okta Org and create a API Token.
@@ -59,9 +58,33 @@ api_token = "xxxx"
 > Old School (aka. Manually)
 
 ```
+# Show version
 terraform version
-```
 
+# Initialize
+terraform init
+
+# What will happen
+terraform plan
+
+# Make it happen
+terraform apply
+
+# Go and review your Okta org
+...
+
+# Update the app.tf 
+...
+
+# Re-execute init, plan and apply
+terraform init
+terraform plan
+terraform apply
+
+
+# Clean up
+terraform destory
+```
 
 > Lazy Way
 Help
