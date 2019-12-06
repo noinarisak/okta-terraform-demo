@@ -16,7 +16,7 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 
 Setup developer Okta Org and create a API Token.
 
-1. Setup developer Okta Org at [Developer.okta.com](https://developer.okta.com/)
+1. Setup developer Okta Org at [Developer.okta.com](https://developer.okta.com/).
 2. Active Okta Org and go to the Dashboad.
 3. On the Dashboard screen, navigate `API` menu and select `Tokens`.
 4. On the API screen, click `Create Token` and name your API Token.
@@ -29,7 +29,9 @@ Copy and rename `backend.config.sample` to `backend.config`. Update the config f
 # Example
 mv backend.config.sample backend.config
 ```
+### Old School (aka. Manually)
 
+### Lazy Way
 Help
 ```
 make help
