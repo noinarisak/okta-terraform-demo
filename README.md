@@ -39,7 +39,7 @@ make destory
 ## More information
 
 * Okta
-  * Developers
+  * [Developer.okta.com](https://developer.okta.com)
  
 * Terraform
   * [Introduction to Terraform](https://www.terraform.io/intro/index.html)
