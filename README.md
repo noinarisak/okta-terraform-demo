@@ -86,30 +86,6 @@ terraform apply
 terraform destory
 ```
 
-> Lazy Way
-Help
-```
-make help
-```
-
-Create, Review and Apply
-
-```
-# Create terraform plan to apply
-make create 
-
-# Review
-...
-
-# Execute terraform plan
-make apply
-```
-
-Cleanup 
-```
-make destory
-```
-
 ## More information
 
 * Okta
