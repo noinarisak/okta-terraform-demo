@@ -16,10 +16,12 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 
 ### Tools
 
-Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since Okta Provider is still *Community* stage the binary will not automatically be pulled in by `terraform` cli like aws, gcp, etc. 
+Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since Okta Provider is still *Community* stage the binary will NOT automatically be pulled in by `terraform` cli like aws, gcp, etc. 
+
 
 Okta Provider instructions: 
-* WARNING: `terraform
+* WARNING: `terraform` cli  must be installed.
+* 
 
 ### Setup Steps
 Setup developer Okta Org and create a API Token.
@@ -92,3 +94,4 @@ make destory
   * [Terraform Tutorial](https://learn.hashicorp.com/terraform)
   * [Terraform Okta Provider](https://www.terraform.io/docs/providers/okta/index.html)
   * [Terraform Provider Ecosystem](https://www.terraform.io/docs/providers/index.html)
+  * [Third-party Plugins Install](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
