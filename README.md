@@ -1,5 +1,5 @@
 # Okta :heart: Terraform
-Simple Proof of Concept showcasing Okta and Terraform implementation.
+Simple demo showcasing Okta and Terraform implementation.
 
 
 ## ToC
