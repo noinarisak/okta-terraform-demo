@@ -55,8 +55,6 @@ api_token = "xxxx"
 
 ### Run it!
 
-> Old School (aka. Manually)
-
 ```
 # Show version
 terraform version
