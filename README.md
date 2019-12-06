@@ -10,24 +10,25 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 ## Pre Req
 
 * Okta Org/Tenant
-* Terraform and Terraform Okta Provider
+* Terraform and Terraform Okta Provider/Plugin
 
 ## Quick Start
 
 ### Tools
 
-Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since Okta Provider is still *Community* stage the binary will NOT automatically be pulled in by `terraform` cli like aws, gcp, etc. 
+Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since the Okta Provider is still *Community* status the binary will NOT automatically be pulled in by `terraform` cli like aws, gcp, etc.
 
 Okta Provider instructions:
 
 * WARNING: `terraform` cli  must be installed
-* Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting zip file associated with OS and unzip. (ie. `erraform-provider-okta-darwin-amd64.zip` for MacOS)
+* Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
 * Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows.
 
 ### Setup Steps for Demo
-Setup developer Okta Org and create a API Token.
 
-1. Setup developer Okta Org at [Developer.okta.com](https://developer.okta.com/).
+Setup a developer Okta Org and create a API Token.
+
+1. Setup developer Okta Org at [developer.okta.com](https://developer.okta.com/).
 2. Active your Okta Org and then go to the Dashboad.
 3. On the Dashboard screen, navigate `API` menu and select `Tokens`.
 4. On the API screen, click `Create Token` and name your API Token.
