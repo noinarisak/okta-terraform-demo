@@ -21,7 +21,8 @@ Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terra
 
 Okta Provider instructions: 
 * WARNING: `terraform` cli  must be installed.
-* 
+* Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting zip file associated with OS and unzip. (ie. `erraform-provider-okta-darwin-amd64.zip` for MacOS)
+* Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows
 
 ### Setup Steps
 Setup developer Okta Org and create a API Token.
