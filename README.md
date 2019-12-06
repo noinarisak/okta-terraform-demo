@@ -14,6 +14,9 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 
 ## Quick Start
 
+Setup developer okta tenant and API Token
+Update backend.config 
+
 Help
 ```
 make help
