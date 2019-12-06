@@ -10,10 +10,18 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 ## Pre Req
 
 * Okta Org/Tenant
-* Terraform and Terraform Provider
+* Terraform and Terraform Okta Provider
 
 ## Quick Start
 
+### Tools
+
+Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since Okta Provider is still *Community* stage the binary will not automatically be pulled in by `terraform` cli like aws, gcp, etc. 
+
+Okta Provider instructions: 
+* WARNING: `terraform
+
+### Setup Steps
 Setup developer Okta Org and create a API Token.
 
 1. Setup developer Okta Org at [Developer.okta.com](https://developer.okta.com/).
@@ -25,34 +33,32 @@ Setup developer Okta Org and create a API Token.
 
 Setup the example.
 
-1. Copy and rename `backend.config.sample` to `backend.config`. 
+1. Copy and rename `okta.tfvars.sample` to `okta.tfvars`. 
 
 ```
-# Exaple
-mv backend.config.sample backend.config
+# Example
+mv okta.tfvars.sample okta.tfvars
 ```
 
 2. Update the config file with the Okta Org configuration values.
 
 ```
-# backend.config
+# okta.tfvars
 org_name  = "dev-302083"
 base_url  = "okta.com"
 api_token = "xxxx"
 ```
 
-# Example
+
+### Run it!
+
+> Old School (aka. Manually)
+
 ```
-mv backend.config.sample backend.config
-```
-
-Let's do it!
-
-### Old School (aka. Manually)
+terraform 
 
 
-
-### Lazy Way
+> Lazy Way
 Help
 ```
 make help
@@ -79,6 +85,7 @@ make destory
 
 * Okta
   * [Developer.okta.com](https://developer.okta.com)
+  * [Okta + Terraform](https://www.okta.com/blog/2019/08/better-together-using-the-okta-integration-with-hashicorp-terraform)
  
 * Terraform
   * [Introduction to Terraform](https://www.terraform.io/intro/index.html)
