@@ -14,8 +14,26 @@ Simple Proof of Concept showcasing Okta and Terraform implementation.
 
 ## Quick Start
 
+Help
 ```
 make help
+```
+
+Create, Review and Apply
+```
+# Create terraform plan to apply
+make create 
+
+# Review
+...
+
+# Execute terraform plan
+make apply
+```
+
+Cleanup 
+```
+make destory
 ```
 
 ## More information
@@ -24,5 +42,7 @@ make help
   * Developers
  
 * Terraform
-  * Terraform Okta Provider
-  * Terraform Other provider ecosystem.
+  * [Introduction to Terraform](https://www.terraform.io/intro/index.html)
+  * [Terraform Tutorial](https://learn.hashicorp.com/terraform)
+  * [Terraform Okta Provider](https://www.terraform.io/docs/providers/okta/index.html)
+  * [Terraform Provider Ecosystem](https://www.terraform.io/docs/providers/index.html)
