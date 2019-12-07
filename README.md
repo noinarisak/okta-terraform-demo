@@ -63,11 +63,11 @@ terraform version
 # Initialize
 terraform init
 
-# What will happen
-terraform plan
+# What will happen. NOTE: '-lock=false' is only for demo. Remote state and Locking is recommended for resources.
+terraform plan -var-file=okta.tfvars -out=okta.tfpan -lock=false
 
 # Make it happen
-terraform apply
+terraform apply okta.tfplan
 
 # Go and review your Okta org
 ...
@@ -82,6 +82,8 @@ terraform apply
 
 
 # Clean up
+terraform init
+terraform plan
 terraform destory
 ```
 
