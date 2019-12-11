@@ -24,7 +24,7 @@ Okta Provider instructions:
 * Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
 * Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows.
 
-### Setup Steps for Demo
+### Setup Steps for Each Demo
 
 Setup a developer Okta Org and create a API Token.
 
@@ -37,7 +37,7 @@ Setup a developer Okta Org and create a API Token.
 
 Setup the example.
 
-1. Copy and rename `okta.tfvars.sample` to `okta.tfvars`. 
+1. Copy and rename `okta.tfvars.sample` to `okta.tfvars`.
 
 ```
 # Example
@@ -53,13 +53,21 @@ base_url  = "okta.com"
 api_token = "xxxx"
 ```
 
+### Validate install
 
-### Run it!
-
-```
+```bash
 # Show version
 terraform version
 
+ie.
+Terraform v0.12.9
++ provider.okta v3.0.38
+
+...
+
+```
+
+```bash
 # Initialize
 terraform init
 
@@ -72,7 +80,7 @@ terraform apply okta.tfplan
 # Go and review your Okta org
 ...
 
-# Update the app.tf 
+# Update the app.tf
 ...
 
 # Re-execute init, plan and apply
@@ -87,12 +95,16 @@ terraform plan
 terraform destory
 ```
 
+## Issues/Bug
+
+Please submit Issues/Bugs using [GitHub Issues](https://github.com/noinarisak/okta-terraform-demo/issues).
+
 ## More information
 
 * Okta
   * [Developer.okta.com](https://developer.okta.com)
   * [Okta + Terraform](https://www.okta.com/blog/2019/08/better-together-using-the-okta-integration-with-hashicorp-terraform)
- 
+
 * Terraform
   * [Introduction to Terraform](https://www.terraform.io/intro/index.html)
   * [Terraform Tutorial](https://learn.hashicorp.com/terraform)
