@@ -1,5 +1,5 @@
 # Okta :heart: Terraform
-Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners that are new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
+Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners who are new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
 
 
 ## Table of Contents
@@ -16,12 +16,12 @@ Simple demos showcasing Okta and Terraform implementation. The intended audience
 
 ### Tools
 
-Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html). The Okta Provider is still **Community** status which means the binary will NOT automatically be pulled down by `terraform` cli (not yet :crossed_fingers:) unlike AWS, GCP, etc. We must manually install the provider.
+Terraform CLI instructions can be found on their [site](https://learn.hashicorp.com/terraform/getting-started/install.html). The Okta Provider is still **Community** status which means the binary will NOT automatically be pulled down by `terraform` cli (not yet :crossed_fingers:) unlike AWS, GCP, etc. We must manually install the provider.
 
 Instructions to install the Okta Provider:
 
 * WARNING: `terraform` cli must be installed first. :smiley:
-* Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
+* Download the latest [plugin](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
 * Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows. *NOTE*: You may have to create the `plugins` folder.
 
 Validate install:
