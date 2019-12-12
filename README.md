@@ -1,5 +1,5 @@
 # Okta :heart: Terraform
-Simple demo showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners that new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
+Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners that new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
 
 
 ## Table of Contents
