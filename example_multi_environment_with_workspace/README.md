@@ -2,6 +2,8 @@
 
 > NOTE: You must complete the [Quick Start](../README.md#quick-start) instructions for this demo.
 
+> NOTE: When you execute `terraform validate` you may get `"Interpolation-only expressions are deprecated"` warning which can be ignored for this demo. Terraform recently updated their HCL interpolation syntax in version `v0.12.18` but the `app.tf` was written against `v0.12.9`.
+
 ## Setup the example.
 
 1. Copy and rename `okta.tfvars.sample` to `{example_folder}/config/okta.tfvars`. Preform this twice, one for staging and production.

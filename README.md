@@ -1,11 +1,11 @@
 # Okta :heart: Terraform
-Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners that new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
+Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners that are new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
 
 
 ## Table of Contents
 * [Pre-Req](#pre-req)
 * [Quick Start](#quick-start)
-* [More Informaion](#more-information)
+* [More Information](#more-information)
 
 ## Pre Req
 
@@ -20,7 +20,7 @@ Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terra
 
 Instructions to install the Okta Provider:
 
-* WARNING: `terraform` cli  must be installed first. :smiley:
+* WARNING: `terraform` cli must be installed first. :smiley:
 * Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
 * Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows. *NOTE*: You may have to create the `plugins` folder.
 
