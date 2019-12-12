@@ -104,9 +104,11 @@ $ ls -l
 i.e
 config
 app.tf
+okta.tfplan
 terraform.tfstate
 terraform.tfstate.backup # if you ran terraform appy again
 
+# Review updates by going to your Okta Org, Applications and Authorization Server screens.
 ```
 
 >(Optional)
@@ -150,6 +152,8 @@ i.e.
   "outputs": {},
   "resources": []
 }
+
+# Review destroy by going to your Okta Org, Applications and Authorization Server screens.
 ```
 
 Congrats! :tada:
