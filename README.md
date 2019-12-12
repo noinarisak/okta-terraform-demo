@@ -16,9 +16,9 @@ Simple demo showcasing Okta and Terraform implementation.
 
 ### Tools
 
-Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since the Okta Provider is still *Community* status the binary will NOT automatically be pulled in by `terraform` cli like aws, gcp, etc.
+Terreform CLI instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) but since the Okta Provider is still **Community** status which means the binary will NOT automatically be pulled in by `terraform` cli unlike AWS, GCP, etc.
 
-Okta Provider instructions:
+Okta Provider install instructions:
 
 * WARNING: `terraform` cli  must be installed
 * Download the latest plugin [here](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
@@ -34,24 +34,6 @@ Setup a developer Okta Org and create a API Token.
 4. On the API screen, click `Create Token` and name your API Token.
 5. Copy and store the generated token so you can use this `backend.config` file later.
 6. Make note of your Okta Org url. (ie. `dev-302083.okta.com`) you need this later too.
-
-Setup the example.
-
-1. Copy and rename `okta.tfvars.sample` to `okta.tfvars`.
-
-```
-# Example
-mv okta.tfvars.sample okta.tfvars
-```
-
-2. Update the config file with the Okta Org configuration values.
-
-```
-# okta.tfvars
-org_name  = "dev-302083"
-base_url  = "okta.com"
-api_token = "xxxx"
-```
 
 ### Validate install
 
