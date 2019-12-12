@@ -5,7 +5,8 @@
 .vscode/
 
 **/*.tfvars
-**/*.tfplan
+*tfplan*
+
 *.NOTES
 
 # End Custom
