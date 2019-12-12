@@ -8,7 +8,7 @@
 
 ```
 # Example
-cp okta.tfvars.sample example_simple/config/okta.tfvars
+cp okta.tfvars.sample example_output_file/config/okta.tfvars
 ```
 
 2. Update the config file with the Okta Org configuration values.
