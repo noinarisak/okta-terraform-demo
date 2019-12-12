@@ -24,7 +24,7 @@ api_token = "xxxx"
 
 ## Run it!
 
-> NOTE: In `terraform plan` step we passing `-lock=false`. In a real word situation option `-lock` default is true. Since this demo and local execution we need this flag to set to `false` to by pass terraforming locking warning/error. More [details](https://www.terraform.io/docs/state/locking.html) about Terraform State and Locking.
+> NOTE: In `terraform plan` step and following steps you'll notice that we are using `-lock=false` option. The option `-lock` by default is true. This is repo is for demoing purpose, and setting `-lock=false` by passes locking warning/error. In a real world situation one should use [terraform backend](https://www.terraform.io/docs/backends/index.html) to store generated state file like AWS s3 & DynamoDB for locking mechanism. More [details](https://www.terraform.io/docs/state/locking.html) about Terraform State and Locking.
 
 Create/Update Action
 ```bash
