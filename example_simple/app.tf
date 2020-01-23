@@ -48,5 +48,5 @@ output "okta_auth_server_issuer_uri" {
 
 # More https://www.terraform.io/docs/configuration/locals.html
 locals {
-  app_name = "demo"
+  app_name = "tf-simple-demo"
 }
