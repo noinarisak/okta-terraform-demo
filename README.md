@@ -32,8 +32,6 @@ $ terraform version
 
 ie.
 Terraform v0.12.18
-+ provider.okta v3.0.38
-
 ...
 
 # List help details
