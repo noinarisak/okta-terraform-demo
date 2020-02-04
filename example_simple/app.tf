@@ -7,15 +7,15 @@ variable "base_url" {}
 
 # More https://www.terraform.io/docs/configuration/providers.html and https://www.terraform.io/docs/providers/okta/index.html
 provider "okta" {
-  org_name  = "${var.org_name}"
-  api_token = "${var.api_token}"
-  base_url  = "${var.base_url}"
+  org_name  = var.org_name
+  api_token = var.api_token
+  base_url  = var.base_url
   version   = "~> 3.0"
 }
 
 # More https://www.terraform.io/docs/configuration/resources.html
 resource "okta_app_oauth" "example" {
-  label          = "${local.app_name}"
+  label          = local.app_name
   type           = "browser"
   grant_types    = ["implicit"]
   redirect_uris  = ["http://${local.app_name}.local/implicit/callback"]
