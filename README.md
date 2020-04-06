@@ -16,13 +16,17 @@ Simple demos showcasing Okta and Terraform implementation. The intended audience
 
 ### Tools
 
-Terraform CLI instructions can be found on their [site](https://learn.hashicorp.com/terraform/getting-started/install.html). The Okta Provider is still **Community** status which means the binary will NOT automatically be pulled down by `terraform` cli (not yet :crossed_fingers:) unlike AWS, GCP, etc. We must manually install the provider.
+> NEWS: As of February 19, 2020, Okta Provider is official HashiCorp Terraform Provider! :tada: :tada: :tada: There is no need to manually install the binary to `~/.terraform.d/plugins` it will be done automatically like our AWS and GCP provider friends.
 
-Instructions to install the Okta Provider:
+Terraform CLI instructions can be found on their [site](https://learn.hashicorp.com/terraform/getting-started/install.html). ~~The Okta Provider is still **Community** status which means the binary will NOT automatically be pulled down by `terraform` cli (not yet :crossed_fingers:) unlike AWS, GCP, etc. We must manually install the provider.~~
 
-* WARNING: `terraform` cli must be installed first. :smiley:
-* Download the latest [plugin](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)
-* Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows. *NOTE*: You may have to create the `plugins` folder.
+~~Instructions to install the Okta Provider:~~
+
+~~* WARNING: `terraform` cli must be installed first. :smiley:~~
+
+~~* Download the latest [plugin](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)~~
+
+~~* Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows. *NOTE*: You may have to create the `plugins` folder.~~
 
 Validate install:
 
