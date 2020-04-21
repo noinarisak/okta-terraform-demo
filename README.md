@@ -77,5 +77,6 @@ Please submit Issues/Bugs/Features using [GitHub Issues](https://github.com/noin
   * [Third-party Plugins Install](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
 
 * Additional Articles and Blogs
+  * [Deeper walkthough with Okta + Terraform](https://github.com/articulate/terraform-provider-okta-demos) Many thanks to Articulate and [quantumew](https://github.com/quantumew) :tada:
   * [Better together using Okta Intergration...](https://www.okta.com/blog/2019/08/better-together-using-the-okta-integration-with-hashicorp-terraform/)
   * [Managing Multiple Okta Instances with Terraform Cloud](https://developer.okta.com/blog/2020/02/03/managing-multiple-okta-instances-with-terraform-cloud)
