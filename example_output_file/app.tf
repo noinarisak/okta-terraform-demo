@@ -5,6 +5,24 @@ variable "org_name" {}
 variable "api_token" {}
 variable "base_url" {}
 
+terraform {
+  required_providers {
+    okta = {
+      version = "= 3.5.0"
+      source  = "oktadeveloper/okta"
+    }
+    local = {
+      version = "= 1.4.0"
+      source  = "hashicorp/local"
+    }
+    template = {
+      version = "= 2.1.2"
+      source  = "hashicorp/template"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 # More https://www.terraform.io/docs/configuration/providers.html and https://www.terraform.io/docs/providers/okta/index.html
 provider "okta" {
   org_name  = var.org_name
@@ -33,10 +51,10 @@ resource "okta_auth_server" "example" {
 data "template_file" "exampleConfiguration" {
   template = "${file("${path.module}/example.dotenv.template")}"
   vars = {
-    client_id         = "${okta_app_oauth.example.client_id}"
-    client_secret     = "${okta_app_oauth.example.client_secret}"
-    auth_server_id    = "${okta_auth_server.example.id}"
-    domain            = "${var.org_name}.${var.base_url}"
+    client_id      = "${okta_app_oauth.example.client_id}"
+    client_secret  = "${okta_app_oauth.example.client_secret}"
+    auth_server_id = "${okta_auth_server.example.id}"
+    domain         = "${var.org_name}.${var.base_url}"
   }
 }
 

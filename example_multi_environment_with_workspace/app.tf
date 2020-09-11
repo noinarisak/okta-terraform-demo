@@ -5,6 +5,16 @@ variable "org_name" {}
 variable "api_token" {}
 variable "base_url" {}
 
+terraform {
+  required_providers {
+    okta = {
+      version = "= 3.5.0"
+      source  = "oktadeveloper/okta"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 # More https://www.terraform.io/docs/configuration/providers.html and https://www.terraform.io/docs/providers/okta/index.html
 provider "okta" {
   org_name  = var.org_name

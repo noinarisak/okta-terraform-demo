@@ -2,18 +2,18 @@
 
 > NOTE: You must complete the [Quick Start](../README.md#quick-start) instructions for this demo.
 
-## Setup the example.
+## Setup the example
 
 1. Copy and rename `okta.tfvars.sample` to `{example_folder}/config/okta.tfvars`.
 
-```
+```bash
 # Example
 cp okta.tfvars.sample example_simple/config/okta.tfvars
 ```
 
 2. Update the config file with the Okta Org configuration values.
 
-```
+```bash
 # okta.tfvars
 org_name  = "dev-302083"
 base_url  = "okta.com"
@@ -25,6 +25,7 @@ api_token = "xxxx"
 > NOTE: In `terraform plan` step and following steps you'll notice that we are using `-lock=false` option. The option `-lock` by default is true. This repo is for demoing purpose, and setting `-lock=false` let us by pass any locking warning/error. In a real world situation one should use [terraform backend](https://www.terraform.io/docs/backends/index.html) to store the state file using services like AWS s3 & DynamoDB as a locking mechanism. More [details](https://www.terraform.io/docs/state/locking.html) about Terraform State and Locking.
 
 Create/Update Action
+
 ```bash
 
 # Root of the project
@@ -38,7 +39,7 @@ org_name  = "dev-123456"
 base_url  = "okta.com"
 api_token = "00uhfN0..."
 
-# Initatialize all the providers/plugin
+# Initialize all the providers/plugin
 $ terraform init
 
 # Validate the terraform scripts
@@ -106,13 +107,13 @@ config
 app.tf
 okta.tfplan
 terraform.tfstate
-terraform.tfstate.backup # if you ran terraform appy again
+terraform.tfstate.backup # if you ran terraform apply again
 
 # Review updates by going to your Okta Org, Applications and Authorization Server screens.
 ```
 
 >(Optional)
-Inspect `terraform.tfstate` json file in your favorite editor. This file should never by manaully updated and for advance usage please refer to [`teraform state`](https://www.terraform.io/docs/commands/state/index.html) command. This state file is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures. More [details](https://www.terraform.io/docs/state/locking.html) about Terraform State.
+Inspect `terraform.tfstate` json file in your favorite editor. This file should never by manually updated and for advance usage please refer to [`teraform state`](https://www.terraform.io/docs/commands/state/index.html) command. This state file is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures. More [details](https://www.terraform.io/docs/state/locking.html) about Terraform State.
 
 Change/Update Action
 
@@ -124,14 +125,14 @@ vi app.tf # preferred editor
 # Re-execute init, validate, plan and apply commands.
 ```
 
-Destory Action
+Destroy Action
 
 ```bash
 $ terraform destroy \
     -var-file=config/okta.tfvars \
     -lock=false
 
-# You will be prompted to confirm destory action.
+# You will be prompted to confirm destroy action.
 i.e.
 ...
 Do you really want to destroy all resources?

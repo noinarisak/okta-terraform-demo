@@ -1,32 +1,21 @@
 # Okta :heart: Terraform
-Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners who are new to `Terraform` but familar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
 
+Simple demos showcasing Okta and Terraform implementation. The intended audience for this repo are for practitioners who are new to `Terraform` but familiar with Okta. Please review this [introduction on Terraform](https://www.terraform.io/intro/index.html) and of course more info on [Okta](https://developer.okta.com/).
 
 ## Table of Contents
+
 * [Pre-Req](#pre-req)
 * [Quick Start](#quick-start)
 * [More Information](#more-information)
 
 ## Pre Req
 
-* Okta Org/Tenant
-* Terraform and Terraform Okta Provider(aka. Plugins)
+* Okta Tenant - Free Development tenant [here](https://developer.okta.com/).
+* Terraform - Install docs [here](https://learn.hashicorp.com/tutorials/terraform/install-cli) and introduction [here](https://www.terraform.io/intro/index.html).
 
 ## Quick Start
 
 ### Tools
-
-> NEWS: As of February 19, 2020, Okta Provider is official HashiCorp Terraform Provider! :tada: :tada: :tada: There is no need to manually install the binary to `~/.terraform.d/plugins` it will be done automatically like our AWS and GCP provider friends.
-
-Terraform CLI instructions can be found on their [site](https://learn.hashicorp.com/terraform/getting-started/install.html). ~~The Okta Provider is still **Community** status which means the binary will NOT automatically be pulled down by `terraform` cli (not yet :crossed_fingers:) unlike AWS, GCP, etc. We must manually install the provider.~~
-
-~~Instructions to install the Okta Provider:~~
-
-~~* WARNING: `terraform` cli must be installed first. :smiley:~~
-
-~~* Download the latest [plugin](https://github.com/articulate/terraform-provider-okta/releases), selecting the zip file associated with your OS and unzip. (ie. `terraform-provider-okta-darwin-amd64.zip` for MacOS)~~
-
-~~* Move the binary file to the your `~/.terraform.d/plugins` on MacOS/Linux or `%APPDATA%\terraform.d\plugins` on Windows. *NOTE*: You may have to create the `plugins` folder.~~
 
 Validate install:
 
@@ -35,7 +24,7 @@ Validate install:
 $ terraform version
 
 ie.
-Terraform v0.12.18
+Terraform v0.13.x
 ...
 
 # List help details
@@ -47,7 +36,7 @@ $ terraform help
 Setup a developer Okta Org and create a API Token.
 
 1. Setup developer Okta Org at [developer.okta.com](https://developer.okta.com/).
-2. Activate your Okta Org and then go to the Dashboad.
+2. Activate your Okta Org and then go to the Dashboard.
 3. On the Dashboard screen, navigate `API` menu and select `Tokens`.
 4. On the API screen, click `Create Token` and name your API Token.
 5. Copy and store the generated token so you can use this `backend.config` file later.
@@ -77,6 +66,6 @@ Please submit Issues/Bugs/Features using [GitHub Issues](https://github.com/noin
   * [Third-party Plugins Install](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
 
 * Additional Articles and Blogs
-  * [Deeper walkthough with Okta + Terraform](https://github.com/articulate/terraform-provider-okta-demos) Many thanks to Articulate and [quantumew](https://github.com/quantumew) :tada:
-  * [Better together using Okta Intergration...](https://www.okta.com/blog/2019/08/better-together-using-the-okta-integration-with-hashicorp-terraform/)
+  * [Deeper walk-though with Okta + Terraform](https://github.com/articulate/terraform-provider-okta-demos) Many thanks to Articulate and [quantumew](https://github.com/quantumew) :tada:
+  * [Better together using Okta Integration...](https://www.okta.com/blog/2019/08/better-together-using-the-okta-integration-with-hashicorp-terraform/)
   * [Managing Multiple Okta Instances with Terraform Cloud](https://developer.okta.com/blog/2020/02/03/managing-multiple-okta-instances-with-terraform-cloud)
