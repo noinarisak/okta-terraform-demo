@@ -24,7 +24,7 @@ Validate install:
 $ terraform version
 
 ie.
-Terraform v0.13.x
+Terraform v0.14.x
 ...
 
 # List help details
