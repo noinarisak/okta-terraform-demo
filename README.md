@@ -15,6 +15,8 @@ Simple demos showcasing Okta and Terraform implementation. The intended audience
 
 ## Quick Start
 
+*NOTE*: This walk-through was developed on version Terraform v0.14, any other version of Terraform and your mileage will vary :wink:. There is a wonder tool, [tfenv](https://github.com/tfutils/tfenv), to manage multiple version on you mac if happen to manage different versions of Terraform.
+
 ### Tools
 
 Validate install:
@@ -64,6 +66,9 @@ Please submit Issues/Bugs/Features using [GitHub Issues](https://github.com/noin
   * [Terraform Okta Provider](https://www.terraform.io/docs/providers/okta/index.html)
   * [Terraform Provider Ecosystem](https://www.terraform.io/docs/providers/index.html)
   * [Third-party Plugins Install](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
+
+* Other tools
+  * [Terraform version manager](https://github.com/tfutils/tfenv)
 
 * Additional Articles and Blogs
   * [Deeper walk-though with Okta + Terraform](https://github.com/articulate/terraform-provider-okta-demos) Many thanks to Articulate and [quantumew](https://github.com/quantumew) :tada:
