@@ -21,7 +21,7 @@ base_url  = "okta.com"
 api_token = "xxxx"
 
 # prd.okta.tfvars
-org_name  = "dev-302083"
+org_name  = "dev-302084"
 base_url  = "okta.com"
 api_token = "xxxx"
 ```
