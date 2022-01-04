@@ -9,7 +9,7 @@ terraform {
   required_providers {
     okta = {
       version = "~> 3.5.0"
-      source  = "oktadeveloper/okta"
+      source  = "okta/okta"
     }
     local = {
       version = "~> 1.4.0"
@@ -20,7 +20,7 @@ terraform {
       source  = "hashicorp/template"
     }
   }
-  required_version = ">= 0.13"
+  required_version = ">= 0.15"
 }
 
 # More https://www.terraform.io/docs/configuration/providers.html and https://www.terraform.io/docs/providers/okta/index.html
@@ -33,10 +33,10 @@ provider "okta" {
 # More https://www.terraform.io/docs/configuration/resources.html
 resource "okta_app_oauth" "example" {
   label          = local.app_name
-  type           = "browser"
-  grant_types    = ["implicit"]
+  type           = "web"
+  grant_types    = ["authorization_code", "implicit"]
   redirect_uris  = ["http://${local.app_name}.local/implicit/callback"]
-  response_types = ["token", "id_token"]
+  response_types = ["code", "token", "id_token"]
   issuer_mode    = "ORG_URL"
 }
 
@@ -69,7 +69,8 @@ output "okta_app_oauth_client_id" {
 }
 
 output "okta_app_oauth_client_secret" {
-  value = okta_app_oauth.example.client_secret
+  value     = okta_app_oauth.example.client_secret
+  sensitive = true
 }
 
 output "okta_auth_server_id" {

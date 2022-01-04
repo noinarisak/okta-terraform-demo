@@ -11,11 +11,11 @@ Simple demos showcasing Okta and Terraform implementation. The intended audience
 ## Pre Req
 
 * Okta Tenant - Free Development tenant [here](https://developer.okta.com/).
-* Terraform - Install docs [here](https://learn.hashicorp.com/tutorials/terraform/install-cli) and introduction [here](https://www.terraform.io/intro/index.html).
+* Terraform (v1.1.x+) - Install docs [here](https://learn.hashicorp.com/tutorials/terraform/install-cli) and introduction [here](https://www.terraform.io/intro/index.html).
 
 ## Quick Start
 
-*NOTE*: This walk-through was developed on version Terraform v0.14, any other version of Terraform and your mileage will vary :wink:. There is a wonder tool, [tfenv](https://github.com/tfutils/tfenv), to manage multiple version on you mac if happen to manage different versions of Terraform.
+*NOTE*: This walk-through was developed on version Terraform v1.1.x, any other version of Terraform and your mileage will vary but should base on HashiCorp :wink:. There is a wonder tool, [tfenv](https://github.com/tfutils/tfenv), to manage multiple version on you mac if happen to manage different versions of Terraform.
 
 ### Tools
 
@@ -26,7 +26,7 @@ Validate install:
 $ terraform version
 
 ie.
-Terraform v0.14.x
+Terraform v1.1.0
 ...
 
 # List help details
