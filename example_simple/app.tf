@@ -8,7 +8,7 @@ variable "base_url" {}
 terraform {
   required_providers {
     okta = {
-      version = "~> 3.20.0"
+      version = "~> 3.39.0"
       source  = "okta/okta"
     }
   }
