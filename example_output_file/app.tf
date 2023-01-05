@@ -8,19 +8,15 @@ variable "base_url" {}
 terraform {
   required_providers {
     okta = {
-      version = "~> 3.5.0"
+      version = "~> 3.39.0"
       source  = "okta/okta"
     }
     local = {
-      version = "~> 1.4.0"
       source  = "hashicorp/local"
-    }
-    template = {
-      version = "~> 2.1.2"
-      source  = "hashicorp/template"
+      version = "~> 2.2.3"
     }
   }
-  required_version = ">= 0.15"
+  required_version = "~> 1.1"
 }
 
 # More https://www.terraform.io/docs/configuration/providers.html and https://www.terraform.io/docs/providers/okta/index.html
@@ -46,22 +42,39 @@ resource "okta_auth_server" "example" {
   name        = "main.${local.app_name}"
 }
 
-# More https://www.terraform.io/docs/providers/template/index.html
-data "template_file" "exampleConfiguration" {
-  template = file("${path.module}/example.dotenv.template")
-  vars = {
-    client_id      = "${okta_app_oauth.example.client_id}"
-    client_secret  = "${okta_app_oauth.example.client_secret}"
-    auth_server_id = "${okta_auth_server.example.id}"
-    domain         = "${var.org_name}.${var.base_url}"
-  }
-}
+# # More https://www.terraform.io/docs/providers/template/index.html
+# data "template_file" "exampleConfiguration" {
+#   template = file("${path.module}/example.dotenv.template")
+#   vars = {
+#     client_id      = "${okta_app_oauth.example.client_id}"
+#     client_secret  = "${okta_app_oauth.example.client_secret}"
+#     auth_server_id = "${okta_auth_server.example.id}"
+#     domain         = "${var.org_name}.${var.base_url}"
+#   }
+# }
 
-# More https://www.terraform.io/docs/providers/local/r/file.html
+# resource "local_file" "react_app_testenv" {
+#   content = templatefile("${path.module}/react-app-testenv.tftpl",
+#     { "HUB_OKTA_SPA_CLIENT_ID" = module.hub.spa_application_client_id,
+#       "HUB_OKTA_ISSUER"        = module.hub.spa_application_issuer
+#   })
+#   filename = "${path.module}/react-app/testenv"
+# }
+
 resource "local_file" "exampleDotenv" {
-  content  = data.template_file.exampleConfiguration.rendered
+  content = templatefile("${path.module}/example.dotenv.template",
+    { "client_id"      = "${okta_app_oauth.example.client_id}",
+      "client_secret"  = "${okta_app_oauth.example.client_secret}",
+      "auth_server_id" = "${okta_auth_server.example.id}",
+      "domain"         = "${var.org_name}.${var.base_url}"
+  })
   filename = "${path.module}/example.env"
+
 }
+# resource "local_file" "exampleDotenv" {
+#   content  = data.template_file.exampleConfiguration.rendered
+#   filename = "${path.module}/example.env"
+# }
 
 # More https://www.terraform.io/docs/configuration/outputs.html
 output "okta_app_oauth_client_id" {

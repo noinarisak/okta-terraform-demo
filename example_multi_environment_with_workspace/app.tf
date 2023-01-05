@@ -8,11 +8,11 @@ variable "base_url" {}
 terraform {
   required_providers {
     okta = {
-      version = "~> 3.5.0"
-      source  = "oktadeveloper/okta"
+      version = "~> 3.39.0"
+      source  = "okta/okta"
     }
   }
-  required_version = ">= 0.13"
+  required_version = "~> 1.1"
 }
 
 # More https://www.terraform.io/docs/configuration/providers.html and https://www.terraform.io/docs/providers/okta/index.html
@@ -45,6 +45,7 @@ output "okta_app_oauth_client_id" {
 
 output "okta_app_oauth_client_secret" {
   value = okta_app_oauth.example.client_secret
+  sensitive = true
 }
 
 output "okta_auth_server_id" {
