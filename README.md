@@ -15,7 +15,7 @@ Simple demos showcasing Okta and Terraform implementation. The intended audience
 
 ## Quick Start
 
-*NOTE*: This walk-through was developed on version Terraform v1.1.x, any other version of Terraform and your mileage will vary but should base on HashiCorp :wink:. There is a wonder tool, [tfenv](https://github.com/tfutils/tfenv), to manage multiple version on you mac if happen to manage different versions of Terraform.
+*NOTE*: This walk-through was developed on version Terraform v1.1.x, any other version of Terraform and your mileage will vary but should base on HashiCorp :wink:. There is a wonderful tool, [tfenv](https://github.com/tfutils/tfenv), to manage multiple version on you mac if happen to manage different versions of Terraform.
 
 ### Tools
 
